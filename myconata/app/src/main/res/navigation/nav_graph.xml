@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/createContact"
+        android:name="com.example.myapplication0000.fragments.create.CreateContact"
+        android:label="activity_create_contact"
+        tools:layout="@layout/fragment_create_contactt" >
+        <action
+            android:id="@+id/action_createContact_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/createContact"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactList"
+        android:name="com.example.myapplication0000.fragments.userList.ContactListFragment"
+        android:label="fragment_contact_list"
+        tools:layout="@layout/fragment_contact_list" >
+        <action
+            android:id="@+id/action_contactList_to_editData"
+            app:destination="@id/editData" />
+        <action
+            android:id="@+id/action_contactList_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/contactList"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_contactList_to_smsFragment"
+            app:destination="@id/smsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editData"
+        android:name="com.example.myapplication0000.fragments.update.EditData"
+        android:label="fragment_edit_data"
+        tools:layout="@layout/fragment_edit_data" >
+        <action
+            android:id="@+id/action_editData_to_contactList"
+            app:destination="@id/contactList" />
+        <argument
+            android:name="currentUsers"
+            app:argType="com.example.myapplication0000.room.Contacts" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.myapplication0000.fragments.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_contactList"
+            app:destination="@id/contactList" />
+        <action
+            android:id="@+id/action_loginFragment_to_createContact"
+            app:destination="@id/createContact" />
+        <action
+            android:id="@+id/action_loginFragment_to_smsFragment"
+            app:destination="@id/smsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/smsFragment"
+        android:name="com.example.myapplication0000.fragments.SmsFragment"
+        android:label="fragment_sms"
+        tools:layout="@layout/fragment_sms" >
+        <action
+            android:id="@+id/action_smsFragment_to_contactList"
+            app:destination="@id/contactList" />
+        <action
+            android:id="@+id/action_smsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>

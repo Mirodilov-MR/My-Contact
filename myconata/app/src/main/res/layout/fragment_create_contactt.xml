@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9FBFE"
+    tools:context=".fragments.create.CreateContact">
+        <TextView
+            android:id="@+id/appbar_name"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="Ro'yxatdan o'tish"
+            android:textColor="#303B4F"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/leo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.18"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guideline"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.28" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/add_image"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ellipse"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.85">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/plusf"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+            android:id="@+id/name_TV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edit_text_round"
+            android:elevation="0.5dp"
+            android:hint="Ism, Familya"
+            android:textColorHint="#596272"
+            android:importantForAutofill="no"
+            android:paddingLeft="7dp"
+            android:textAlignment="viewStart"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneNumber_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <EditText
+            android:id="@+id/phoneNumber_field"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edit_text_round"
+            android:elevation="0.5dp"
+            android:hint="Telefon raqam"
+            android:importantForAutofill="no"
+            android:textColorHint="#5B4E4D4D"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:paddingLeft="5dp"
+            android:text="+998"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/country_SP"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_TV"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <Spinner
+            android:id="@+id/country_SP"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edit_text_round"
+            android:elevation="0.5dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/address_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber_field"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <EditText
+            android:id="@+id/address_field"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edit_text_round"
+            android:elevation="0.5dp"
+            android:hint="Manzil"
+            android:textColorHint="#596272"
+            android:paddingLeft="7dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/password_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country_SP"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.8" />
+
+        <EditText
+            android:id="@+id/password_field"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/edit_text_round"
+            android:elevation="0.5dp"
+            android:hint="Parol"
+            android:importantForAutofill="no"
+            android:textColorHint="#596272"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address_field"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.8" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.11" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_round"
+            android:elevation="0.5dp"
+            android:paddingLeft="10dp"
+            android:text="Ro'yxatdan o'tish"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/version_TV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_field"
+            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintWidth_percent="0.8" />
+
+    <TextView
+        android:id="@+id/version_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Version 9.0"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
